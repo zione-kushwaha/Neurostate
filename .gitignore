@@ -1,0 +1,36 @@
+# Paper manuscript & build directory
+paper/
+
+# Flutter / Dart build artifacts
+**/build/
+**/.dart_tool/
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/.packages
+**/pubspec.lock
+
+# Android build & local configuration
+**/.gradle/
+**/local.properties
+**/GeneratedPluginRegistrant.java
+**/*.apk
+**/*.aab
+
+# iOS & macOS build
+**/Pods/
+**/.symlinks/
+**/Flutter/Flutter.framework/
+**/Flutter/Flutter.podspec
+**/xcuserdata/
+
+# Windows build
+**/windows/flutter/ephemeral/
+
+# IDE & OS temporary files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
