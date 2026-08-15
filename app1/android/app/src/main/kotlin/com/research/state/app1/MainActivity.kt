@@ -1,0 +1,5 @@
+package com.research.state.app1
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity : FlutterActivity()
