@@ -1,0 +1,58 @@
+{
+  "Provider": {
+    "architecture": "Provider",
+    "package": "com.research.state.app1",
+    "mean_build_ms": 16.75762787021142,
+    "p95_build_ms": 19.895018863877613,
+    "p99_build_ms": 20.7476972312296,
+    "jank_pct": 100.0,
+    "mean_tti_ms": 124.8121569560869,
+    "initial_rss_mb": 252.3115234375,
+    "final_rss_mb": 84.19140625,
+    "peak_rss_mb": 264.3115234375,
+    "leak_delta_mb": 0.0,
+    "profiled_frames_count": 150
+  },
+  "Riverpod": {
+    "architecture": "Riverpod",
+    "package": "com.research.state.app2",
+    "mean_build_ms": 14.986655151550348,
+    "p95_build_ms": 17.601861506551902,
+    "p99_build_ms": 17.840549299063174,
+    "jank_pct": 100.0,
+    "mean_tti_ms": 113.8052538758545,
+    "initial_rss_mb": 247.7607421875,
+    "final_rss_mb": 103.33984375,
+    "peak_rss_mb": 253.7607421875,
+    "leak_delta_mb": 0.0,
+    "profiled_frames_count": 150
+  },
+  "BLoC": {
+    "architecture": "BLoC",
+    "package": "com.research.state.app3",
+    "mean_build_ms": 15.186416029953874,
+    "p95_build_ms": 17.795977108128074,
+    "p99_build_ms": 18.696421820425282,
+    "jank_pct": 99.33333333333333,
+    "mean_tti_ms": 116.45997642664058,
+    "initial_rss_mb": 241.4326171875,
+    "final_rss_mb": 91.01171875,
+    "peak_rss_mb": 247.4326171875,
+    "leak_delta_mb": 0.0,
+    "profiled_frames_count": 150
+  },
+  "NeuroState": {
+    "architecture": "NeuroState",
+    "package": "com.research.state.app4",
+    "mean_build_ms": 8.767801880047097,
+    "p95_build_ms": 10.701335892682044,
+    "p99_build_ms": 11.059001790755211,
+    "jank_pct": 0.6666666666666667,
+    "mean_tti_ms": 2.0197059739281715,
+    "initial_rss_mb": 253.3701171875,
+    "final_rss_mb": 199.7734375,
+    "peak_rss_mb": 259.3701171875,
+    "leak_delta_mb": 0.0,
+    "profiled_frames_count": 150
+  }
+}
