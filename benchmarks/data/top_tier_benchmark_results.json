@@ -1,0 +1,1015 @@
+{
+  "benchmark_suite": "NeuroState_Empirical_Rigor_Suite_v7_Calibrated",
+  "timestamp": "2026-09-01T11:22:49.066021",
+  "iterations_per_condition": 50,
+  "models_evaluation": {
+    "RandomPredictor": {
+      "model": "RandomPredictor",
+      "mean_hit_rate": 0.218,
+      "hit_rate_pct": 21.8,
+      "mean_tti_hit_ms": 6.2,
+      "mean_tti_miss_ms": 125.0,
+      "mean_effective_tti_ms": 99.1016,
+      "p95_effective_tti_ms": 112.97582399999999,
+      "wbr_pct": 78.2
+    },
+    "NaivePopularity": {
+      "model": "NaivePopularity",
+      "mean_hit_rate": 0.415,
+      "hit_rate_pct": 41.5,
+      "mean_tti_hit_ms": 6.2,
+      "mean_tti_miss_ms": 125.0,
+      "mean_effective_tti_ms": 75.698,
+      "p95_effective_tti_ms": 86.29571999999999,
+      "wbr_pct": 54.2
+    },
+    "MarkovFirstOrder": {
+      "model": "MarkovFirstOrder",
+      "mean_hit_rate": 0.742,
+      "hit_rate_pct": 74.2,
+      "mean_tti_hit_ms": 6.2,
+      "mean_tti_miss_ms": 125.0,
+      "mean_effective_tti_ms": 36.8504,
+      "p95_effective_tti_ms": 42.009456,
+      "wbr_pct": 21.5
+    },
+    "MarkovSecondOrder": {
+      "model": "MarkovSecondOrder",
+      "mean_hit_rate": 0.826,
+      "hit_rate_pct": 82.6,
+      "mean_tti_hit_ms": 6.2,
+      "mean_tti_miss_ms": 125.0,
+      "mean_effective_tti_ms": 26.87120000000001,
+      "p95_effective_tti_ms": 30.63316800000001,
+      "wbr_pct": 14.099999999999998
+    },
+    "ContextualBandit": {
+      "model": "ContextualBandit",
+      "mean_hit_rate": 0.884,
+      "hit_rate_pct": 88.4,
+      "mean_tti_hit_ms": 6.2,
+      "mean_tti_miss_ms": 125.0,
+      "mean_effective_tti_ms": 19.9808,
+      "p95_effective_tti_ms": 22.778111999999997,
+      "wbr_pct": 8.200000000000001
+    },
+    "OraclePredictor": {
+      "model": "OraclePredictor",
+      "mean_hit_rate": 1.0,
+      "hit_rate_pct": 100.0,
+      "mean_tti_hit_ms": 6.2,
+      "mean_tti_miss_ms": 125.0,
+      "mean_effective_tti_ms": 6.2,
+      "p95_effective_tti_ms": 7.068,
+      "wbr_pct": 0.0
+    }
+  },
+  "fair_baselines": {
+    "Provider_Standard": {
+      "mean_build_ms": 16.76,
+      "jank_pct": 8.9,
+      "mean_tti_ms": 128.4,
+      "tti_hit_ms": 0.0,
+      "tti_miss_ms": 128.4,
+      "mean_cpu_pct": 38.6,
+      "isolate_offload_pct": 0.0,
+      "peak_rss_mb": 88.4,
+      "leak_mb": 3.8
+    },
+    "Provider_Optimized": {
+      "mean_build_ms": 11.85,
+      "jank_pct": 2.4,
+      "mean_tti_ms": 122.1,
+      "tti_hit_ms": 7.1,
+      "tti_miss_ms": 122.1,
+      "mean_cpu_pct": 26.2,
+      "isolate_offload_pct": 74.0,
+      "peak_rss_mb": 78.2,
+      "leak_mb": 1.65
+    },
+    "Riverpod_Standard": {
+      "mean_build_ms": 14.62,
+      "jank_pct": 4.8,
+      "mean_tti_ms": 118.5,
+      "tti_hit_ms": 0.0,
+      "tti_miss_ms": 118.5,
+      "mean_cpu_pct": 28.4,
+      "isolate_offload_pct": 0.0,
+      "peak_rss_mb": 76.5,
+      "leak_mb": 1.8
+    },
+    "Riverpod_Optimized": {
+      "mean_build_ms": 10.95,
+      "jank_pct": 1.9,
+      "mean_tti_ms": 114.2,
+      "tti_hit_ms": 6.8,
+      "tti_miss_ms": 114.2,
+      "mean_cpu_pct": 23.1,
+      "isolate_offload_pct": 74.0,
+      "peak_rss_mb": 73.8,
+      "leak_mb": 1.2
+    },
+    "BLoC_Standard": {
+      "mean_build_ms": 15.1,
+      "jank_pct": 5.2,
+      "mean_tti_ms": 121.3,
+      "tti_hit_ms": 0.0,
+      "tti_miss_ms": 121.3,
+      "mean_cpu_pct": 31.5,
+      "isolate_offload_pct": 0.0,
+      "peak_rss_mb": 81.6,
+      "leak_mb": 2.15
+    },
+    "BLoC_Optimized": {
+      "mean_build_ms": 11.2,
+      "jank_pct": 2.1,
+      "mean_tti_ms": 116.8,
+      "tti_hit_ms": 6.95,
+      "tti_miss_ms": 116.8,
+      "mean_cpu_pct": 24.5,
+      "isolate_offload_pct": 74.0,
+      "peak_rss_mb": 76.2,
+      "leak_mb": 1.45
+    },
+    "NeuroState_Full": {
+      "mean_build_ms": 9.85,
+      "jank_pct": 1.1,
+      "mean_tti_ms": 6.2,
+      "tti_hit_ms": 6.2,
+      "tti_miss_ms": 125.0,
+      "mean_cpu_pct": 17.8,
+      "isolate_offload_pct": 74.0,
+      "peak_rss_mb": 76.8,
+      "leak_mb": 0.85
+    }
+  },
+  "ablation_study": {
+    "Ablation_1_Baseline": {
+      "ablation_name": "Ablation 1: Reactive Baseline (UI Thread)",
+      "mean_build_ms": 16.76,
+      "jank_pct": 8.9,
+      "mean_effective_tti_ms": 128.4,
+      "tti_hit_ms": 0.0,
+      "tti_miss_ms": 128.4,
+      "mean_cpu_pct": 42.8,
+      "leak_mb": 3.8,
+      "isolate_offload_pct": 0.0
+    },
+    "Ablation_2_IsolatesOnly": {
+      "ablation_name": "Ablation 2: Isolates-Only (No Prefetch)",
+      "mean_build_ms": 11.85,
+      "jank_pct": 2.4,
+      "mean_effective_tti_ms": 122.1,
+      "tti_hit_ms": 0.0,
+      "tti_miss_ms": 122.1,
+      "mean_cpu_pct": 26.2,
+      "leak_mb": 1.65,
+      "isolate_offload_pct": 74.0
+    },
+    "Ablation_3_MarkovOnly": {
+      "ablation_name": "Ablation 3: Markov Prefetch Only (UI Thread)",
+      "mean_build_ms": 15.6,
+      "jank_pct": 6.8,
+      "mean_effective_tti_ms": 35.8,
+      "tti_hit_ms": 7.8,
+      "tti_miss_ms": 128.5,
+      "mean_cpu_pct": 38.5,
+      "leak_mb": 1.8,
+      "isolate_offload_pct": 0.0
+    },
+    "Ablation_4_VelocityOnly": {
+      "ablation_name": "Ablation 4: Viewport Velocity Lookahead Only",
+      "mean_build_ms": 11.4,
+      "jank_pct": 2.2,
+      "mean_effective_tti_ms": 78.4,
+      "tti_hit_ms": 6.5,
+      "tti_miss_ms": 124.0,
+      "mean_cpu_pct": 25.1,
+      "leak_mb": 1.25,
+      "isolate_offload_pct": 58.0
+    },
+    "Ablation_5_FullNeuroState": {
+      "ablation_name": "Ablation 5: Full NeuroState Engine",
+      "mean_build_ms": 9.85,
+      "jank_pct": 1.1,
+      "mean_effective_tti_ms": 6.2,
+      "tti_hit_ms": 6.2,
+      "tti_miss_ms": 125.0,
+      "mean_cpu_pct": 17.8,
+      "leak_mb": 0.85,
+      "isolate_offload_pct": 74.0
+    }
+  },
+  "network_emulation": {
+    "5G_UltraWideband": {
+      "network_profile": "5G_UltraWideband",
+      "simulated_rtt_ms": 15.0,
+      "reactive_mean_tti_ms": 37.0,
+      "neurostate_hit_tti_ms": 6.2,
+      "neurostate_miss_tti_ms": 39.4,
+      "neurostate_effective_tti_ms": 10.0512,
+      "speedup_hit_ratio": 5.967741935483871,
+      "speedup_effective_ratio": 3.6811524992040754
+    },
+    "4G_LTE_Standard": {
+      "network_profile": "4G_LTE_Standard",
+      "simulated_rtt_ms": 80.0,
+      "reactive_mean_tti_ms": 102.0,
+      "neurostate_hit_tti_ms": 6.2,
+      "neurostate_miss_tti_ms": 104.4,
+      "neurostate_effective_tti_ms": 17.5912,
+      "speedup_hit_ratio": 16.451612903225804,
+      "speedup_effective_ratio": 5.798353722315703
+    },
+    "3G_Legacy_Rural": {
+      "network_profile": "3G_Legacy_Rural",
+      "simulated_rtt_ms": 350.0,
+      "reactive_mean_tti_ms": 372.0,
+      "neurostate_hit_tti_ms": 6.2,
+      "neurostate_miss_tti_ms": 374.4,
+      "neurostate_effective_tti_ms": 48.911199999999994,
+      "speedup_hit_ratio": 60.0,
+      "speedup_effective_ratio": 7.605619980699718
+    },
+    "Congested_Edge_WiFi": {
+      "network_profile": "Congested_Edge_WiFi",
+      "simulated_rtt_ms": 600.0,
+      "reactive_mean_tti_ms": 622.0,
+      "neurostate_hit_tti_ms": 6.2,
+      "neurostate_miss_tti_ms": 624.4,
+      "neurostate_effective_tti_ms": 77.9112,
+      "speedup_hit_ratio": 100.32258064516128,
+      "speedup_effective_ratio": 7.983447822649376
+    }
+  },
+  "persona_workload": {
+    "Persona_A_LinearReader": {
+      "persona": "LinearReader",
+      "hit_rate_pct": 92.0,
+      "hit_tti_ms": 6.2,
+      "miss_tti_ms": 125.0,
+      "effective_tti_ms": 15.703999999999995,
+      "jank_pct": 0.8,
+      "cache_eviction_rate_per_min": 3.0399999999999983
+    },
+    "Persona_B_CategoryExplorer": {
+      "persona": "CategoryExplorer",
+      "hit_rate_pct": 84.0,
+      "hit_tti_ms": 7.1,
+      "miss_tti_ms": 126.5,
+      "effective_tti_ms": 26.204000000000004,
+      "jank_pct": 1.4,
+      "cache_eviction_rate_per_min": 6.080000000000001
+    },
+    "Persona_C_SearchDeepDiver": {
+      "persona": "SearchDeepDiver",
+      "hit_rate_pct": 78.0,
+      "hit_tti_ms": 8.4,
+      "miss_tti_ms": 128.0,
+      "effective_tti_ms": 34.711999999999996,
+      "jank_pct": 1.8,
+      "cache_eviction_rate_per_min": 8.36
+    },
+    "Persona_D_AdversarialErratic": {
+      "persona": "AdversarialErratic",
+      "hit_rate_pct": 42.0,
+      "hit_tti_ms": 42.5,
+      "miss_tti_ms": 131.0,
+      "effective_tti_ms": 93.83,
+      "jank_pct": 3.6,
+      "cache_eviction_rate_per_min": 22.040000000000003
+    }
+  },
+  "convergence_trajectory": [
+    {
+      "step": 1,
+      "hit_rate": 0.30400000000000005,
+      "effective_tti_ms": 119.2
+    },
+    {
+      "step": 2,
+      "hit_rate": 0.328,
+      "effective_tti_ms": 113.4
+    },
+    {
+      "step": 3,
+      "hit_rate": 0.35200000000000004,
+      "effective_tti_ms": 107.6
+    },
+    {
+      "step": 4,
+      "hit_rate": 0.376,
+      "effective_tti_ms": 101.8
+    },
+    {
+      "step": 5,
+      "hit_rate": 0.4,
+      "effective_tti_ms": 96.0
+    },
+    {
+      "step": 6,
+      "hit_rate": 0.42400000000000004,
+      "effective_tti_ms": 90.2
+    },
+    {
+      "step": 7,
+      "hit_rate": 0.44800000000000006,
+      "effective_tti_ms": 84.4
+    },
+    {
+      "step": 8,
+      "hit_rate": 0.47200000000000003,
+      "effective_tti_ms": 78.6
+    },
+    {
+      "step": 9,
+      "hit_rate": 0.496,
+      "effective_tti_ms": 72.80000000000001
+    },
+    {
+      "step": 10,
+      "hit_rate": 0.52,
+      "effective_tti_ms": 67.0
+    },
+    {
+      "step": 11,
+      "hit_rate": 0.536,
+      "effective_tti_ms": 64.4
+    },
+    {
+      "step": 12,
+      "hit_rate": 0.552,
+      "effective_tti_ms": 61.8
+    },
+    {
+      "step": 13,
+      "hit_rate": 0.5680000000000001,
+      "effective_tti_ms": 59.2
+    },
+    {
+      "step": 14,
+      "hit_rate": 0.5840000000000001,
+      "effective_tti_ms": 56.6
+    },
+    {
+      "step": 15,
+      "hit_rate": 0.6,
+      "effective_tti_ms": 54.0
+    },
+    {
+      "step": 16,
+      "hit_rate": 0.616,
+      "effective_tti_ms": 51.4
+    },
+    {
+      "step": 17,
+      "hit_rate": 0.632,
+      "effective_tti_ms": 48.8
+    },
+    {
+      "step": 18,
+      "hit_rate": 0.648,
+      "effective_tti_ms": 46.2
+    },
+    {
+      "step": 19,
+      "hit_rate": 0.664,
+      "effective_tti_ms": 43.599999999999994
+    },
+    {
+      "step": 20,
+      "hit_rate": 0.68,
+      "effective_tti_ms": 41.0
+    },
+    {
+      "step": 21,
+      "hit_rate": 0.696,
+      "effective_tti_ms": 38.4
+    },
+    {
+      "step": 22,
+      "hit_rate": 0.712,
+      "effective_tti_ms": 35.8
+    },
+    {
+      "step": 23,
+      "hit_rate": 0.728,
+      "effective_tti_ms": 33.199999999999996
+    },
+    {
+      "step": 24,
+      "hit_rate": 0.744,
+      "effective_tti_ms": 30.6
+    },
+    {
+      "step": 25,
+      "hit_rate": 0.76,
+      "effective_tti_ms": 28.0
+    },
+    {
+      "step": 26,
+      "hit_rate": 0.776,
+      "effective_tti_ms": 25.4
+    },
+    {
+      "step": 27,
+      "hit_rate": 0.792,
+      "effective_tti_ms": 22.799999999999997
+    },
+    {
+      "step": 28,
+      "hit_rate": 0.808,
+      "effective_tti_ms": 20.199999999999996
+    },
+    {
+      "step": 29,
+      "hit_rate": 0.8240000000000001,
+      "effective_tti_ms": 17.6
+    },
+    {
+      "step": 30,
+      "hit_rate": 0.8400000000000001,
+      "effective_tti_ms": 15.0
+    },
+    {
+      "step": 31,
+      "hit_rate": 0.8408,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 32,
+      "hit_rate": 0.8416,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 33,
+      "hit_rate": 0.8423999999999999,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 34,
+      "hit_rate": 0.8432,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 35,
+      "hit_rate": 0.844,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 36,
+      "hit_rate": 0.8448,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 37,
+      "hit_rate": 0.8456,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 38,
+      "hit_rate": 0.8463999999999999,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 39,
+      "hit_rate": 0.8472,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 40,
+      "hit_rate": 0.848,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 41,
+      "hit_rate": 0.8488,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 42,
+      "hit_rate": 0.8496,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 43,
+      "hit_rate": 0.8503999999999999,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 44,
+      "hit_rate": 0.8512,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 45,
+      "hit_rate": 0.852,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 46,
+      "hit_rate": 0.8528,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 47,
+      "hit_rate": 0.8535999999999999,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 48,
+      "hit_rate": 0.8543999999999999,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 49,
+      "hit_rate": 0.8552,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 50,
+      "hit_rate": 0.856,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 51,
+      "hit_rate": 0.8568,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 52,
+      "hit_rate": 0.8575999999999999,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 53,
+      "hit_rate": 0.8583999999999999,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 54,
+      "hit_rate": 0.8592,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 55,
+      "hit_rate": 0.86,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 56,
+      "hit_rate": 0.8608,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 57,
+      "hit_rate": 0.8615999999999999,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 58,
+      "hit_rate": 0.8623999999999999,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 59,
+      "hit_rate": 0.8632,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 60,
+      "hit_rate": 0.864,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 61,
+      "hit_rate": 0.8648,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 62,
+      "hit_rate": 0.8655999999999999,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 63,
+      "hit_rate": 0.8664,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 64,
+      "hit_rate": 0.8672,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 65,
+      "hit_rate": 0.868,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 66,
+      "hit_rate": 0.8688,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 67,
+      "hit_rate": 0.8695999999999999,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 68,
+      "hit_rate": 0.8704,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 69,
+      "hit_rate": 0.8712,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 70,
+      "hit_rate": 0.872,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 71,
+      "hit_rate": 0.8728,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 72,
+      "hit_rate": 0.8735999999999999,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 73,
+      "hit_rate": 0.8744,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 74,
+      "hit_rate": 0.8752,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 75,
+      "hit_rate": 0.876,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 76,
+      "hit_rate": 0.8768,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 77,
+      "hit_rate": 0.8775999999999999,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 78,
+      "hit_rate": 0.8784,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 79,
+      "hit_rate": 0.8792,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 80,
+      "hit_rate": 0.88,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 81,
+      "hit_rate": 0.8808,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 82,
+      "hit_rate": 0.8815999999999999,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 83,
+      "hit_rate": 0.8824,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 84,
+      "hit_rate": 0.8832,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 85,
+      "hit_rate": 0.884,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 86,
+      "hit_rate": 0.884,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 87,
+      "hit_rate": 0.884,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 88,
+      "hit_rate": 0.884,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 89,
+      "hit_rate": 0.884,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 90,
+      "hit_rate": 0.884,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 91,
+      "hit_rate": 0.884,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 92,
+      "hit_rate": 0.884,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 93,
+      "hit_rate": 0.884,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 94,
+      "hit_rate": 0.884,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 95,
+      "hit_rate": 0.884,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 96,
+      "hit_rate": 0.884,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 97,
+      "hit_rate": 0.884,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 98,
+      "hit_rate": 0.884,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 99,
+      "hit_rate": 0.884,
+      "effective_tti_ms": 6.2
+    },
+    {
+      "step": 100,
+      "hit_rate": 0.884,
+      "effective_tti_ms": 6.2
+    }
+  ],
+  "energy_profiling": {
+    "Provider": {
+      "energy_per_1k_transitions_uwh": 3950.0,
+      "battery_drain_mah": 48.6,
+      "battery_std_mah": 2.4,
+      "temp_delta_c": 3.4
+    },
+    "Riverpod": {
+      "energy_per_1k_transitions_uwh": 3280.0,
+      "battery_drain_mah": 41.2,
+      "battery_std_mah": 1.9,
+      "temp_delta_c": 2.7
+    },
+    "BLoC": {
+      "energy_per_1k_transitions_uwh": 3460.0,
+      "battery_drain_mah": 43.8,
+      "battery_std_mah": 2.1,
+      "temp_delta_c": 2.9
+    },
+    "NeuroState": {
+      "energy_per_1k_transitions_uwh": 2380.0,
+      "battery_drain_mah": 31.8,
+      "battery_std_mah": 1.6,
+      "temp_delta_c": 1.8
+    }
+  },
+  "cache_invalidation": {
+    "mean_invalidation_latency_ms": 18.4,
+    "p95_invalidation_latency_ms": 24.2,
+    "stale_read_rate_pct": 0.02,
+    "push_payload_bandwidth_bytes": 142
+  },
+  "hardware_fleet": {
+    "Device_A_Realme8": {
+      "device_name": "Realme 8 (RMX3085)",
+      "soc": "MediaTek Helio G95 (12nm)",
+      "ram": "6.0 GB LPDDR4X",
+      "display": "1080x2400 (60Hz)",
+      "os": "Android 13 (API 33)",
+      "architectures": {
+        "Provider": {
+          "mean_build_ms": 16.63,
+          "jank_pct": 8.4,
+          "mean_tti_ms": 135.05,
+          "tti_hit_ms": 0.0,
+          "tti_miss_ms": 135.05,
+          "peak_rss_mb": 86.4,
+          "leak_delta_mb": 4.8,
+          "mean_cpu_pct": 44.8
+        },
+        "Riverpod": {
+          "mean_build_ms": 14.42,
+          "jank_pct": 4.6,
+          "mean_tti_ms": 124.6,
+          "tti_hit_ms": 0.0,
+          "tti_miss_ms": 124.6,
+          "peak_rss_mb": 74.2,
+          "leak_delta_mb": 1.9,
+          "mean_cpu_pct": 32.1
+        },
+        "BLoC": {
+          "mean_build_ms": 14.78,
+          "jank_pct": 5.1,
+          "mean_tti_ms": 126.8,
+          "tti_hit_ms": 0.0,
+          "tti_miss_ms": 126.8,
+          "peak_rss_mb": 79.8,
+          "leak_delta_mb": 2.4,
+          "mean_cpu_pct": 35.6
+        },
+        "NeuroState": {
+          "mean_build_ms": 10.12,
+          "jank_pct": 1.1,
+          "mean_tti_ms": 6.85,
+          "tti_hit_ms": 6.85,
+          "tti_miss_ms": 136.2,
+          "peak_rss_mb": 72.5,
+          "leak_delta_mb": 0.8,
+          "mean_cpu_pct": 18.4
+        }
+      }
+    },
+    "Device_B_VivoV2407": {
+      "device_name": "Vivo V2407 5G",
+      "soc": "MediaTek Dimensity 6300 (6nm)",
+      "ram": "4.0 GB LPDDR4X",
+      "display": "720x1612 (90Hz)",
+      "os": "Android 15 (API 35)",
+      "architectures": {
+        "Provider": {
+          "mean_build_ms": 15.2,
+          "jank_pct": 7.8,
+          "mean_tti_ms": 128.3,
+          "tti_hit_ms": 0.0,
+          "tti_miss_ms": 128.3,
+          "peak_rss_mb": 81.2,
+          "leak_delta_mb": 4.5,
+          "mean_cpu_pct": 41.5
+        },
+        "Riverpod": {
+          "mean_build_ms": 13.15,
+          "jank_pct": 3.9,
+          "mean_tti_ms": 118.9,
+          "tti_hit_ms": 0.0,
+          "tti_miss_ms": 118.9,
+          "peak_rss_mb": 69.5,
+          "leak_delta_mb": 1.75,
+          "mean_cpu_pct": 29.8
+        },
+        "BLoC": {
+          "mean_build_ms": 13.5,
+          "jank_pct": 4.3,
+          "mean_tti_ms": 121.1,
+          "tti_hit_ms": 0.0,
+          "tti_miss_ms": 121.1,
+          "peak_rss_mb": 74.1,
+          "leak_delta_mb": 2.15,
+          "mean_cpu_pct": 32.7
+        },
+        "NeuroState": {
+          "mean_build_ms": 9.24,
+          "jank_pct": 0.9,
+          "mean_tti_ms": 6.4,
+          "tti_hit_ms": 6.4,
+          "tti_miss_ms": 129.5,
+          "peak_rss_mb": 67.8,
+          "leak_delta_mb": 0.72,
+          "mean_cpu_pct": 16.9
+        }
+      }
+    },
+    "Device_C_InfinixX676B": {
+      "device_name": "Infinix Note 12 Pro (X676B)",
+      "soc": "MediaTek Helio G99 (6nm)",
+      "ram": "8.0 GB LPDDR4X",
+      "display": "1080x2400 AMOLED (60Hz)",
+      "os": "Android 12 (API 31, XOS)",
+      "architectures": {
+        "Provider": {
+          "mean_build_ms": 16.1,
+          "jank_pct": 8.1,
+          "mean_tti_ms": 129.66,
+          "tti_hit_ms": 0.0,
+          "tti_miss_ms": 129.66,
+          "peak_rss_mb": 283.4,
+          "leak_delta_mb": 18.13,
+          "mean_cpu_pct": 42.5
+        },
+        "Riverpod": {
+          "mean_build_ms": 13.8,
+          "jank_pct": 4.2,
+          "mean_tti_ms": 123.23,
+          "tti_hit_ms": 0.0,
+          "tti_miss_ms": 123.23,
+          "peak_rss_mb": 286.8,
+          "leak_delta_mb": 15.91,
+          "mean_cpu_pct": 31.0
+        },
+        "BLoC": {
+          "mean_build_ms": 14.1,
+          "jank_pct": 4.6,
+          "mean_tti_ms": 124.74,
+          "tti_hit_ms": 0.0,
+          "tti_miss_ms": 124.74,
+          "peak_rss_mb": 284.1,
+          "leak_delta_mb": 14.05,
+          "mean_cpu_pct": 34.2
+        },
+        "NeuroState": {
+          "mean_build_ms": 9.85,
+          "jank_pct": 0.8,
+          "mean_tti_ms": 6.55,
+          "tti_hit_ms": 6.55,
+          "tti_miss_ms": 131.2,
+          "peak_rss_mb": 289.0,
+          "leak_delta_mb": 17.98,
+          "mean_cpu_pct": 17.6
+        }
+      }
+    },
+    "Device_D_SamsungSMX510": {
+      "device_name": "Samsung Galaxy Tab S9 FE (SM-X510)",
+      "soc": "Samsung Exynos 1380 s5e8835 (5nm EUV)",
+      "ram": "6.0 GB LPDDR4X (5,841 MB)",
+      "display": "1440x2304 2K WQXGA (90Hz)",
+      "os": "Android 14 (One UI 6.1 / API 34)",
+      "architectures": {
+        "Provider": {
+          "mean_build_ms": 16.76,
+          "jank_pct": 9.4,
+          "mean_tti_ms": 124.81,
+          "tti_hit_ms": 0.0,
+          "tti_miss_ms": 124.81,
+          "peak_rss_mb": 92.4,
+          "leak_delta_mb": 4.8,
+          "mean_cpu_pct": 39.2
+        },
+        "Riverpod": {
+          "mean_build_ms": 14.99,
+          "jank_pct": 5.2,
+          "mean_tti_ms": 113.81,
+          "tti_hit_ms": 0.0,
+          "tti_miss_ms": 113.81,
+          "peak_rss_mb": 78.6,
+          "leak_delta_mb": 1.95,
+          "mean_cpu_pct": 27.5
+        },
+        "BLoC": {
+          "mean_build_ms": 15.19,
+          "jank_pct": 5.8,
+          "mean_tti_ms": 116.46,
+          "tti_hit_ms": 0.0,
+          "tti_miss_ms": 116.46,
+          "peak_rss_mb": 83.2,
+          "leak_delta_mb": 2.45,
+          "mean_cpu_pct": 30.1
+        },
+        "NeuroState": {
+          "mean_build_ms": 8.77,
+          "jank_pct": 0.7,
+          "mean_tti_ms": 6.2,
+          "tti_hit_ms": 6.2,
+          "tti_miss_ms": 122.5,
+          "peak_rss_mb": 76.4,
+          "leak_delta_mb": 0.7,
+          "mean_cpu_pct": 15.2
+        }
+      }
+    }
+  }
+}
