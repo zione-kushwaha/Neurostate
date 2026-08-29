@@ -1,0 +1,24 @@
+\begin{table*}[t]
+\centering
+\caption{Cross-Platform Empirical Hardware \& Operating System Testbed Matrix (4-Tier Fleet)}
+\label{tab:hardware_testbed}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Parameter} & \textbf{Device A (Mid-Range 4G Phone)} & \textbf{Device B (Modern 5G Phone)} & \textbf{Device C (6nm AMOLED Phone)} & \textbf{Device D (Flagship 2K Tablet)} \\
+\midrule
+Manufacturer / Model & Realme (\texttt{RMX3085}) & Vivo (\texttt{V2407}) & Infinix Note 12 Pro (\texttt{X676B}) & Samsung Galaxy Tab S9 FE (\texttt{SM-X510}) \\
+System-on-Chip (SoC) & MediaTek Helio G95 (\texttt{MT6785}) & MediaTek Dimensity 6300 5G (\texttt{MT6835}) & MediaTek Helio G99 (\texttt{MT6789}) & Samsung Exynos 1380 (\texttt{s5e8835}) \\
+Process Node & 12\,nm FinFET & 6\,nm TSMC Advanced Node & 6\,nm TSMC Advanced Node & \textbf{5\,nm EUV Advanced Node} \\
+CPU Architecture & 2$\times$ A76 @ 2.05\,GHz + 6$\times$ A55 @ 2.0\,GHz & 2$\times$ A76 @ 2.40\,GHz + 6$\times$ A55 @ 2.0\,GHz & 2$\times$ A76 @ 2.20\,GHz + 6$\times$ A55 @ 2.0\,GHz & \textbf{4$\times$ A78 @ 2.40\,GHz + 4$\times$ A55 @ 2.0\,GHz} \\
+GPU Architecture & ARM Mali-G76 MC4 & ARM Mali-G57 MC2 & ARM Mali-G57 MC2 & \textbf{ARM Mali-G68 MP5} \\
+Total RAM & 6.0\,GB LPDDR4X (5,757\,MB Addressable) & 4.0\,GB LPDDR4X (3,708\,MB Addressable) & \textbf{8.0\,GB LPDDR4X (7,884\,MB Addressable)} & \textbf{6.0\,GB LPDDR4X (5,841\,MB Addressable)} \\
+Display Resolution & $1080 \times 2400$\,px (FHD+, 480\,dpi) & $720 \times 1612$\,px (HD+, 300\,dpi) & $1080 \times 2400$\,px (AMOLED, 480\,dpi) & \textbf{1440 $\times$ 2304\,px (2K WQXGA, 280\,dpi)} \\
+Native VSync Rate & 60.0\,Hz (16.67\,ms budget) & \textbf{90.0\,Hz (11.11\,ms budget)} & 60.0\,Hz (16.67\,ms budget) & \textbf{90.0\,Hz (11.11\,ms budget)} \\
+Operating System & Android 13 (API Level 33) & Android 15 (API Level 35) & Android 12 (API Level 31, XOS) & \textbf{Android 14 (One UI 6.1 / API 34)} \\
+Flutter Runtime & Flutter 3.24.3 (AOT Profile Mode) & Flutter 3.24.3 (AOT Profile Mode) & Flutter 3.24.3 (AOT Profile Mode) & Flutter 3.24.3 (AOT Profile Mode) \\
+Synthetic Dataset & 10,000 Articles ($\sim$23.65\,MB) & 10,000 Articles ($\sim$23.65\,MB) & 10,000 Articles ($\sim$23.65\,MB) & 10,000 Articles ($\sim$23.65\,MB) \\
+\bottomrule
+\end{tabular}
+}
+\end{table*}

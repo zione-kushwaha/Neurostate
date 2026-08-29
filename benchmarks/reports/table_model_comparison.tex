@@ -1,0 +1,20 @@
+\begin{table}[htbp]
+\centering
+\caption{Predictive Accuracy, Wasted Byte Ratio (WBR) \& TTI across Forecasting Models and Control Predictors}
+\label{tab:model_comparison}
+\resizebox{\columnwidth}{!}{
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Prediction Model / Control} & \textbf{Hit Rate (\%)} & \textbf{Hit TTI (ms)} & \textbf{Miss TTI (ms)} & \textbf{Eff. TTI (ms)} & \textbf{WBR (\%)} \\
+\midrule
+Random Prefetch (Control)    &   21.8\% &       6.20 &      125.00 &       99.10 &   78.2\% \\
+Popularity Baseline          &   41.5\% &       6.20 &      125.00 &       75.70 &   54.2\% \\
+1st-Order Markov             &   74.2\% &       6.20 &      125.00 &       36.85 &   21.5\% \\
+2nd-Order Markov             &   82.6\% &       6.20 &      125.00 &       26.87 &   14.1\% \\
+\textbf{Contextual Bandit (Ours)    } & \textbf{  88.4\%} & \textbf{      6.20} & \textbf{     125.00} & \textbf{      19.98} & \textbf{   8.2\%} \\
+\textbf{Oracle Upper Bound (Control)} & \textbf{ 100.0\%} & \textbf{      6.20} & \textbf{     125.00} & \textbf{       6.20} & \textbf{   0.0\%} \\
+\bottomrule
+\multicolumn{6}{l}{\footnotesize Effective TTI ($\text{TTI}_{\text{eff}}$) captures weighted expectation across speculative hits and misses; WBR denotes unaccessed prefetched bytes.} \\
+\end{tabular}
+}
+\end{table}
