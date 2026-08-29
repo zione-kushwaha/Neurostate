@@ -1,0 +1,18 @@
+\begin{table}[htbp]
+\centering
+\caption{Dart Isolate Inter-Thread Serialization Overhead: Deep Copy vs. Zero-Copy}
+\label{tab:isolate_overhead}
+\resizebox{\columnwidth}{!}{
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Payload Size} & \textbf{Deep Copy (ms)} & \textbf{Zero-Copy (ms)} & \textbf{GC Pause Delta ($\mu$s)} & \textbf{Speedup} \\
+\midrule
+10 KB                 & 0.05 ms & 0.01 ms & $+42\,\mu\text{s} \to 12\,\mu\text{s}$ & $5.0\times$ \\
+100 KB                & 0.48 ms & 0.02 ms & $+260\,\mu\text{s} \to 12\,\mu\text{s}$ & $24.0\times$ \\
+1 MB                  & 4.82 ms & 0.03 ms & $+2240\,\mu\text{s} \to 14\,\mu\text{s}$ & $160.7\times$ \\
+5 MB                  & 24.10 ms & 0.04 ms & $+11200\,\mu\text{s} \to 15\,\mu\text{s}$ & $602.5\times$ \\
+\bottomrule
+\multicolumn{5}{l}{\footnotesize \texttt{TransferableTypedData} transfers byte buffers in constant time without main-thread GC allocations.} \\
+\end{tabular}
+}
+\end{table}

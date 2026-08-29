@@ -1,0 +1,18 @@
+\begin{table*}[t]
+\centering
+\caption{Cross-Network Resilience: Latency Masking under Heterogeneous Mobile Network Profiles}
+\label{tab:network_emulation}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Network Profile} & \textbf{Simulated RTT} & \textbf{Reactive TTI (ms)} & \textbf{NeuroState Hit TTI (ms)} & \textbf{NeuroState Miss TTI (ms)} & \textbf{Eff. TTI (ms)} & \textbf{Speedup (Hit / Eff)} \\
+\midrule
+5G Ultra-Wideband        &        15 ms &             37.0 &                 6.20 &                 39.4 &          10.05 & 6.0$\times$ / 3.7$\times$ \\
+4G LTE Standard          &        80 ms &            102.0 &                 6.20 &                104.4 &          17.59 & 16.5$\times$ / 5.8$\times$ \\
+3G Legacy / Rural        &       350 ms &            372.0 &                 6.20 &                374.4 &          48.91 & 60.0$\times$ / 7.6$\times$ \\
+Congested Edge Wi-Fi     &       600 ms &            622.0 &                 6.20 &                624.4 &          77.91 & 100.3$\times$ / 8.0$\times$ \\
+\bottomrule
+\multicolumn{7}{l}{\footnotesize Hit TTI represents speculative cache hits ($2.02\text{--}2.46$\,ms); Miss TTI reflects network fallback latency with concurrent cancellation.} \\
+\end{tabular}
+}
+\end{table*}
