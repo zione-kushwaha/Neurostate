@@ -1,0 +1,34 @@
+\begin{table*}[t]
+\centering
+\caption{Cross-Device Empirical Generalizability: Frame Timing, Micro-Jank, TTI \& Memory across 4 Hardware Tiers}
+\label{tab:cross_device_performance}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{llcccccc}
+\toprule
+\textbf{Hardware Testbed} & \textbf{Architecture} & \textbf{Frame Build (ms)} & \textbf{Jank (\%)} & \textbf{Mean TTI (ms)} & \textbf{Speedup} & \textbf{Peak RSS (MB)} & \textbf{Leak $\Delta$ (MB)} \\
+\midrule
+\multirow{4}{*}{Realme 8 (RMX3085)} & Provider       &        16.63 &    8.4\% &       135.05 &  1.0$\times$ &         86.4 &      +4.80 \\
+                                 & Riverpod       &        14.42 &    4.6\% &       124.60 &  1.1$\times$ &         74.2 &      +1.90 \\
+                                 & BLoC           &        14.78 &    5.1\% &       126.80 &  1.1$\times$ &         79.8 &      +2.40 \\
+                                 & NeuroState     & \textbf{10.12} & \textbf{1.1\%} & \textbf{6.85} & \textbf{19.7$\times$} &         72.5 &      +0.80 \\
+\midrule
+\multirow{4}{*}{Vivo V2407 5G}   & Provider       &        15.20 &    7.8\% &       128.30 &  1.0$\times$ &         81.2 &      +4.50 \\
+                                 & Riverpod       &        13.15 &    3.9\% &       118.90 &  1.1$\times$ &         69.5 &      +1.75 \\
+                                 & BLoC           &        13.50 &    4.3\% &       121.10 &  1.1$\times$ &         74.1 &      +2.15 \\
+                                 & NeuroState     & \textbf{9.24} & \textbf{0.9\%} & \textbf{6.40} & \textbf{20.0$\times$} &         67.8 &      +0.72 \\
+\midrule
+\multirow{4}{*}{Infinix Note 12 Pro (X676B)} & Provider       &        16.10 &    8.1\% &       129.66 &  1.0$\times$ &        283.4 &     +18.13 \\
+                                 & Riverpod       &        13.80 &    4.2\% &       123.23 &  1.1$\times$ &        286.8 &     +15.91 \\
+                                 & BLoC           &        14.10 &    4.6\% &       124.74 &  1.0$\times$ &        284.1 &     +14.05 \\
+                                 & NeuroState     & \textbf{9.85} & \textbf{0.8\%} & \textbf{6.55} & \textbf{19.8$\times$} &        289.0 &     +17.98 \\
+\midrule
+\multirow{4}{*}{Samsung Galaxy Tab S9 FE (SM-X510)} & Provider       &        16.76 &    9.4\% &       124.81 &  1.0$\times$ &         92.4 &      +4.80 \\
+                                 & Riverpod       &        14.99 &    5.2\% &       113.81 &  1.1$\times$ &         78.6 &      +1.95 \\
+                                 & BLoC           &        15.19 &    5.8\% &       116.46 &  1.1$\times$ &         83.2 &      +2.45 \\
+                                 & NeuroState     & \textbf{8.77} & \textbf{0.7\%} & \textbf{6.20} & \textbf{20.1$\times$} &         76.4 &      +0.70 \\
+
+\bottomrule
+\multicolumn{8}{l}{\footnotesize Physical measurements collected in Dart AOT profile mode across smartphones (Realme 8, Vivo V2407, Infinix Note 12 Pro) and 2K tablet (Samsung SM-X510).} \\
+\end{tabular}
+}
+\end{table*}

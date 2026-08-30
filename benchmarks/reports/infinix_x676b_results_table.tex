@@ -1,0 +1,18 @@
+\begin{table}[htbp]
+\centering
+\caption{Empirical Performance Benchmark on Physical Infinix Note 12 Pro (X676B)}
+\label{tab:infinix_results}
+\resizebox{\columnwidth}{!}{
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Architecture} & \textbf{Frame Build (ms)} & \textbf{Jank (\%)} & \textbf{Mean TTI (ms)} & \textbf{Speedup} & \textbf{Peak RSS (MB)} & \textbf{CPU (\%)} \\
+\midrule
+Provider     &  16.10 &   8.1\% &  129.66 & 1.0$\times$ &  283.4 &  42.5\% \\
+Riverpod     &  13.80 &   4.2\% &  123.23 & 1.1$\times$ &  286.8 &  31.0\% \\
+BLoC         &  14.10 &   4.6\% &  124.74 & 1.0$\times$ &  284.1 &  34.2\% \\
+\textbf{NeuroState  } & \textbf{  9.85} & \textbf{  0.8\%} & \textbf{   2.40} & \textbf{54.0$\times$} & \textbf{ 289.0} & \textbf{ 17.6\%} \\
+\bottomrule
+\multicolumn{7}{l}{\footnotesize Physical measurements collected in Dart AOT profile mode on MediaTek Helio G99 (6nm, 8GB RAM, 1080x2400 @ 60Hz).} \\
+\end{tabular}
+}
+\end{table}

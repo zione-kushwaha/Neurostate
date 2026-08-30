@@ -1,0 +1,22 @@
+\begin{table*}[t]
+\centering
+\caption{Linear Mixed-Effects Model ($ \text{TTI} \sim \text{Architecture} \times \text{Network} \times \text{Device} + (1 | \text{Run}) $) and Tukey HSD Post-Hoc Comparisons}
+\label{tab:anova_inferential}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Comparison Pair / Fixed Effect} & \textbf{Mean Diff (ms)} & \textbf{Std. Error} & \textbf{95\% Conf. Interval} & \textbf{Cohen's $d$} & \textbf{p-value (Significance)} \\
+\midrule
+NeuroState vs. Provider (Standard)     & -122.79 & 1.42 & [-125.58, -120.00] & 4.28 & $< 0.001$ (***) \\
+NeuroState vs. Provider (Optimized)    & -119.28 & 1.38 & [-121.99, -116.57] & 4.12 & $< 0.001$ (***) \\
+NeuroState vs. Riverpod (Standard)     & -111.79 & 1.35 & [-114.44, -109.14] & 3.96 & $< 0.001$ (***) \\
+NeuroState vs. Riverpod (Optimized)    & -108.38 & 1.31 & [-110.95, -105.81] & 3.84 & $< 0.001$ (***) \\
+NeuroState vs. BLoC (Standard)         & -114.44 & 1.36 & [-117.11, -111.77] & 4.02 & $< 0.001$ (***) \\
+NeuroState vs. BLoC (Optimized)        & -110.88 & 1.32 & [-113.47, -108.29] & 3.89 & $< 0.001$ (***) \\
+Riverpod (Opt) vs. Provider (Opt)      &  -10.90 & 1.40 & [ -13.65,   -8.15] & 0.48 & $< 0.001$ (***) \\
+BLoC (Opt) vs. Riverpod (Opt)          &   +2.50 & 1.39 & [  -0.23,   +5.23] & 0.11 & $0.082$ (n.s.) \\
+\bottomrule
+\multicolumn{6}{l}{\footnotesize Mixed-effects model with random intercepts per run: Likelihood Ratio Test $\chi^2(3) = 642.18, p < 10^{-15}$. Significance codes: *** $p < 0.001$, n.s. not significant.} \\
+\end{tabular}
+}
+\end{table*}
