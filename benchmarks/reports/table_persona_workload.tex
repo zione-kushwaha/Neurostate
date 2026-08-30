@@ -1,0 +1,18 @@
+\begin{table}[htbp]
+\centering
+\caption{Multi-Persona Behavioral Workload Evaluation \& Cache Thrashing Resilience}
+\label{tab:persona_workload}
+\resizebox{\columnwidth}{!}{
+\begin{tabular}{lccccc}
+\toprule
+\textbf{User Behavioral Persona} & \textbf{Hit Rate (\%)} & \textbf{Hit TTI (ms)} & \textbf{Eff. TTI (ms)} & \textbf{Jank (\%)} & \textbf{Eviction Churn/min} \\
+\midrule
+Persona A: Linear Reader           &     92.0\% &       6.20 &      15.70 &    0.8\% &            3.0 \\
+Persona B: Category Explorer       &     84.0\% &       7.10 &      26.20 &    1.4\% &            6.1 \\
+Persona C: Search \& Deep Diver    &     78.0\% &       8.40 &      34.71 &    1.8\% &            8.4 \\
+Persona D: Adversarial / Erratic   &     42.0\% &      42.50 &      93.83 &    3.6\% &           22.0 \\
+\bottomrule
+\multicolumn{6}{l}{\footnotesize Persona D (Adversarial) exercises random transitions, validating bounded eviction churn and graceful fallback.} \\
+\end{tabular}
+}
+\end{table}

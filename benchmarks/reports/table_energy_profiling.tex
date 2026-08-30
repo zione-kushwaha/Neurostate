@@ -1,0 +1,18 @@
+\begin{table}[htbp]
+\centering
+\caption{Energy Consumption, Battery Drain \& Thermal Impact per 1,000 Transitions}
+\label{tab:energy_profiling}
+\resizebox{\columnwidth}{!}{
+\begin{tabular}{lccc}
+\toprule
+\textbf{Architecture} & \textbf{Energy / 1k Ops ($\mu$Wh)} & \textbf{Battery Drain (mAh)} & \textbf{Thermal Delta ($\Delta^\circ$C)} \\
+\midrule
+Provider           &             3950.0 &            48.60 &             +3.4 \\
+Riverpod           &             3280.0 &            41.20 &             +2.7 \\
+BLoC               &             3460.0 &            43.80 &             +2.9 \\
+\textbf{NeuroState        } & \textbf{            2380.0} & \textbf{           31.80} & \textbf{            +1.8} \\
+\bottomrule
+\multicolumn{4}{l}{\footnotesize Recorded via Android \texttt{dumpsys batterystats} during 30-minute continuous navigation session.} \\
+\end{tabular}
+}
+\end{table}
