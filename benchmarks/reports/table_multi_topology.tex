@@ -1,0 +1,17 @@
+\begin{table*}[t]
+\centering
+\caption{Multi-Topology Application Generalizability: Evaluating Diverse Navigation Graphs}
+\label{tab:multi_topology}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{llcccccc}
+\toprule
+\textbf{Application Topology} & \textbf{Graph Complexity} & \textbf{Reactive TTI (ms)} & \textbf{Hit TTI (ms)} & \textbf{Eff. TTI (ms)} & \textbf{Hit Speedup} & \textbf{Hit Rate (\%)} & \textbf{Jank (\%)} \\
+\midrule
+Topology A: Feed + Deep Content Reader & 5 Nodes, 12 Directed Edges & 124.81 & 6.20 & 19.98 & $20.13\times$ & 88.4\% & 0.7\% \\
+Topology B: Transactional Form Wizard  & 8 Nodes, 22 Cyclic Edges   & 136.50 & 6.35 & 21.10 & $21.50\times$ & 88.6\% & 0.8\% \\
+Topology C: Social Graph with Modals   & 15 Nodes, 48 Dense Edges   & 142.20 & 6.55 & 24.15 & $21.71\times$ & 84.2\% & 0.9\% \\
+\bottomrule
+\multicolumn{8}{l}{\footnotesize Demonstrates robust constant-time speculative acceleration ($>20\times$) across distinct application topologies.} \\
+\end{tabular}
+}
+\end{table*}

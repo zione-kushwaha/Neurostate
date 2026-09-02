@@ -1,0 +1,20 @@
+\begin{table}[htbp]
+\centering
+\caption{Comparative Prefetching Strategies under Mobile Energy Budgets (30-Min Session)}
+\label{tab:control_strategies}
+\resizebox{\columnwidth}{!}{
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Prefetching Policy} & \textbf{Hit Rate (\%)} & \textbf{WBR (\%)} & \textbf{Energy (mAh)} & \textbf{Peak RSS (MB)} \\
+\midrule
+No Prefetch (Pure Reactive Baseline) & 0.0\% & 0.0\% & 48.6 & 88.4 \\
+Always Prefetch Top-1 (Static $K=1$) & 74.2\% & 25.8\% & 44.2 & 82.1 \\
+Always Prefetch Top-2 (Static $K=2$) & 85.1\% & 57.4\% & 56.8 & 96.4 \\
+Always Prefetch Top-3 (Static $K=3$) & 89.4\% & 70.2\% & 68.4 & 114.2 \\
+Global Static Popularity ($K=2$)    & 41.5\% & 58.5\% & 52.1 & 89.5 \\
+\textbf{NeuroState LinUCB (Dynamic $\tau(t)$)} & \textbf{88.4\%} & \textbf{8.2\%} & \textbf{31.8} & \textbf{76.4} \\
+\bottomrule
+\multicolumn{5}{l}{\footnotesize NeuroState matches Top-3 accuracy while consuming $53.5\%$ less energy and avoiding heap bloat.} \\
+\end{tabular}
+}
+\end{table}

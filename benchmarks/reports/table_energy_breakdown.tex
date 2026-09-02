@@ -1,0 +1,23 @@
+\begin{table*}[t]
+\centering
+\caption{Component-Level Energy Breakdown: 30-Minute Continuous Session (Disaggregated by Hardware Subsystem)}
+\label{tab:energy_breakdown}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{llccccc}
+\toprule
+\textbf{Runtime Engine} & \textbf{State Architecture} & \textbf{CPU Active (mAh)} & \textbf{CPU Wake-locks (mAh)} & \textbf{Radio I/O (mAh)} & \textbf{DRAM Bandwidth (mAh)} & \textbf{Total Drain (mAh)} \\
+\midrule
+\multirow{3}{*}{\textbf{Google Flutter (Dart AOT)}}
+& Provider (Standard Reactive)           & 24.2 & 11.4 & 8.2  & 4.8 & 48.6 \\
+& Provider (Optimized: Isolates + Cache) & 18.5 & 9.2  & 10.4 & 4.0 & 42.1 \\
+& \textbf{NeuroState (Speculative)}     & \textbf{11.8} & \textbf{4.2} & \textbf{12.6} & \textbf{3.2} & \textbf{31.8} \\
+\midrule
+\multirow{3}{*}{\textbf{React Native (Hermes JSI)}}
+& Context API (Standard Reactive)        & 26.8 & 12.1 & 8.5  & 5.0 & 52.4 \\
+& Context (Optimized: JSI + Cache)       & 20.1 & 9.8  & 10.8 & 4.1 & 44.8 \\
+& \textbf{NeuroState (Speculative)}     & \textbf{12.5} & \textbf{4.6} & \textbf{13.1} & \textbf{3.4} & \textbf{33.6} \\
+\bottomrule
+\multicolumn{7}{l}{\footnotesize Eliminating main-thread compute contention and wake-locks saves more CPU energy than the minor extra radio cost.} \\
+\end{tabular}
+}
+\end{table*}

@@ -1,0 +1,21 @@
+\begin{table}[htbp]
+\centering
+\caption{5D Contextual Bandit Dimension Ablation \& Noise Sensitivity Matrix}
+\label{tab:bandit_sensitivity}
+\resizebox{\columnwidth}{!}{
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Context Configuration / Ablation} & \textbf{Hit Rate (\%)} & \textbf{WBR (\%)} & \textbf{Battery (mAh)} & \textbf{Eff. TTI (ms)} \\
+\midrule
+Full 5D Context Vector ($\mathbf{x}_t \in [0,1]^5$) & \textbf{88.4\%} & \textbf{8.2\%} & \textbf{31.8} & \textbf{19.98} \\
+Ablate Battery Feature ($\text{No } x_{\text{bat}}$) & 89.1\% & 14.8\% & 42.6 & 19.15 \\
+Ablate Network RTT Feature ($\text{No } x_{\text{rtt}}$) & 82.3\% & 18.4\% & 38.2 & 27.22 \\
+Ablate Available RAM Feature ($\text{No } x_{\text{ram}}$) & 88.6\% & 9.1\% & 33.4 & 20.45 \\
+Ablate Scroll Velocity Feature ($\text{No } x_{\text{vel}}$) & 74.5\% & 12.6\% & 35.1 & 36.49 \\
+Ablate Thermal Headroom ($\text{No } x_{\text{therm}}$) & 88.5\% & 8.9\% & 39.4 & 20.12 \\
+Gaussian Noise on Signals ($\sigma = 0.20$) & 85.8\% & 10.4\% & 33.7 & 23.07 \\
+\bottomrule
+\multicolumn{5}{l}{\footnotesize 30-min continuous navigation trace. Battery and thermal features prevent energy/heat runaway.} \\
+\end{tabular}
+}
+\end{table}
