@@ -1,20 +1,20 @@
 \begin{table}[htbp]
 \centering
-\caption{Predictive Accuracy, Wasted Byte Ratio (WBR) \& TTI across Forecasting Models and Control Predictors}
+\caption{Predictive Intent Model Hierarchy \& Control Baselines ($80/20$ Session Split)}
 \label{tab:model_comparison}
 \resizebox{\columnwidth}{!}{
-\begin{tabular}{lccccc}
+\begin{tabular}{lcccc}
 \toprule
-\textbf{Prediction Model / Control} & \textbf{Hit Rate (\%)} & \textbf{Hit TTI (ms)} & \textbf{Miss TTI (ms)} & \textbf{Eff. TTI (ms)} & \textbf{WBR (\%)} \\
+\textbf{Model / Predictor} & \textbf{Hit Rate (\%)} & \textbf{Hit TTI (ms)} & \textbf{Eff. TTI (ms)} & \textbf{WBR (\%)} \\
 \midrule
-Random Prefetch (Control)    &   21.8\% &       6.20 &      125.00 &       99.10 &   78.2\% \\
-Popularity Baseline          &   41.5\% &       6.20 &      125.00 &       75.70 &   54.2\% \\
-1st-Order Markov             &   74.2\% &       6.20 &      125.00 &       36.85 &   21.5\% \\
-2nd-Order Markov             &   82.6\% &       6.20 &      125.00 &       26.87 &   14.1\% \\
-\textbf{Contextual Bandit (Ours)    } & \textbf{  88.4\%} & \textbf{      6.20} & \textbf{     125.00} & \textbf{      19.98} & \textbf{   8.2\%} \\
-\textbf{Oracle Upper Bound (Control)} & \textbf{ 100.0\%} & \textbf{      6.20} & \textbf{     125.00} & \textbf{       6.20} & \textbf{   0.0\%} \\
+\textit{Random Control (Lower Bound)}  &   21.8\% &     6.20 &    99.10 &   78.2\% \\
+Static Popularity                      &   41.5\% &     6.20 &    75.70 &   54.2\% \\
+1st-Order Markov                       &   74.2\% &     6.20 &    36.85 &   21.5\% \\
+2nd-Order Markov (Katz)                &   82.6\% &     6.20 &    26.87 &   14.1\% \\
+\textbf{Contextual Bandit (LinUCB)}    & \textbf{  88.4\%} & \textbf{    6.20} & \textbf{   19.98} & \textbf{   8.2\%} \\
+\textit{Oracle Control (Upper Bound)}  &  100.0\% &     6.20 &     6.20 &    0.0\% \\
 \bottomrule
-\multicolumn{6}{l}{\footnotesize Effective TTI ($\text{TTI}_{\text{eff}}$) captures weighted expectation across speculative hits and misses; WBR denotes unaccessed prefetched bytes.} \\
+\multicolumn{5}{l}{\footnotesize Hit TTI reflects memory activation latency ($6.20$\,ms); WBR denotes Wasted Byte Ratio.} \\
 \end{tabular}
 }
 \end{table}

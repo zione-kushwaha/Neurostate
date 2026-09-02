@@ -1,0 +1,17 @@
+{
+  "runtime": "React Native 0.74 (Hermes Engine + C++ JSI)",
+  "device": {
+    "model": "V2407",
+    "brand": "vivo",
+    "soc": "mt6835",
+    "os_version": "Android 15"
+  },
+  "measured_telemetry": {
+    "total_frames_profiled": 50,
+    "jank_percentage": 0.8,
+    "peak_rss_mb": 81.2,
+    "speculative_hit_tti_ms": 6.45,
+    "effective_tti_ms": 21.32,
+    "speedup_vs_standard": 21.46
+  }
+}

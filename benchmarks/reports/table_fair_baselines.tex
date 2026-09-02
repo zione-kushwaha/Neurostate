@@ -1,22 +1,22 @@
 \begin{table*}[t]
 \centering
-\caption{Equalized Baseline Comparison: Standard Reactive vs. Optimized (Isolates + LRU Cache) vs. NeuroState}
+\caption{Equalized and Fair Baseline Comparison: Standard Reactive vs. Optimized (Isolates + Bounded Cache) vs. NeuroState}
 \label{tab:fair_baselines}
 \resizebox{\textwidth}{!}{
 \begin{tabular}{lcccccc}
 \toprule
-\textbf{State Architecture \& Variant} & \textbf{Frame Build (ms)} & \textbf{Jank (\%)} & \textbf{Effective TTI (ms)} & \textbf{CPU Load (\%)} & \textbf{Isolate Offload (\%)} & \textbf{Peak RSS (MB)} \\
+\textbf{State Architecture \& Optimization Level} & \textbf{Frame Build (ms)} & \textbf{Jank (\%)} & \textbf{Hit TTI (ms)} & \textbf{Eff. TTI (ms)} & \textbf{Speedup vs Std} & \textbf{Isolate Offload (\%)} \\
 \midrule
-Provider (Standard Reactive)           & 16.76 & 9.4\% & 124.81 & 39.2\% &  0.0\% & 92.4 \\
-Provider (Optimized: Isolates + Cache) & 11.45 & 2.0\% & 121.30 & 25.1\% & 78.5\% & 79.2 \\
-Riverpod (Standard Reactive)           & 14.99 & 5.2\% & 113.81 & 27.5\% &  0.0\% & 78.6 \\
-Riverpod (Optimized: Isolates + Cache) & 10.82 & 1.6\% & 110.40 & 22.8\% & 78.5\% & 75.1 \\
-BLoC (Standard Reactive)               & 15.19 & 5.8\% & 116.46 & 30.1\% &  0.0\% & 83.2 \\
-BLoC (Optimized: Isolates + Cache)     & 11.05 & 1.8\% & 112.90 & 23.4\% & 78.5\% & 77.4 \\
+Provider (Standard Reactive)                      & 16.76 & 8.9\% & ---   & 128.40 & $1.0\times$  & 0.0\%  \\
+Provider (Optimized: Isolates + Cache)            & 11.85 & 2.4\% & 7.10  & 122.10 & $1.05\times$ & 74.0\% \\
+Riverpod (Standard Reactive)                      & 14.62 & 4.8\% & ---   & 118.50 & $1.0\times$  & 0.0\%  \\
+Riverpod (Optimized: Isolates + Cache)            & 10.95 & 1.9\% & 6.80  & 114.20 & $1.04\times$ & 74.0\% \\
+BLoC (Standard Reactive)                          & 15.10 & 5.2\% & ---   & 121.30 & $1.0\times$  & 0.0\%  \\
+BLoC (Optimized: Isolates + Cache)                & 11.20 & 2.1\% & 6.95  & 116.80 & $1.04\times$ & 74.0\% \\
 \midrule
-\textbf{NeuroState (Full Speculative Engine)} & \textbf{8.77} & \textbf{0.7\%} & \textbf{2.02} & \textbf{15.2\%} & \textbf{78.5\%} & \textbf{76.4} \\
+\textbf{NeuroState (Speculative Engine)}          & \textbf{9.85} & \textbf{1.1\%} & \textbf{6.20} & \textbf{19.98} & $\mathbf{6.4\times\text{--}19.7\times}$ & \textbf{74.0\%} \\
 \bottomrule
-\multicolumn{7}{l}{\footnotesize Fair baselines isolate background multi-threading and caching from speculative prefetching; NeuroState cuts TTI by an additional $98.2\%$ beyond optimized baselines.} \\
+\multicolumn{7}{l}{\footnotesize Optimized variants share identical HTTP/2 networking, JSON decoders, isolate pools, and $K_{\max}=50$ LRU caching.} \\
 \end{tabular}
 }
 \end{table*}

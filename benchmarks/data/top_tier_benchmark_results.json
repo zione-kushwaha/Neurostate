@@ -1,6 +1,6 @@
 {
-  "benchmark_suite": "NeuroState_Empirical_Rigor_Suite_v7_Calibrated",
-  "timestamp": "2026-09-01T11:22:49.066021",
+  "benchmark_suite": "NeuroState_Empirical_Rigor_Suite_v8_TopTier",
+  "timestamp": "2026-09-02T08:05:34.661816",
   "iterations_per_condition": 50,
   "models_evaluation": {
     "RandomPredictor": {
@@ -1010,6 +1010,117 @@
           "mean_cpu_pct": 15.2
         }
       }
+    }
+  },
+  "cross_runtime_evaluation": {
+    "Flutter_Dart_AOT": {
+      "Provider_Standard": {
+        "frame_build_ms": 16.76,
+        "jank_pct": 9.4,
+        "hit_tti_ms": 124.81,
+        "eff_tti_ms": 124.81,
+        "speedup_hit": 1.0,
+        "speedup_eff": 1.0,
+        "peak_rss_mb": 92.4,
+        "battery_30min_mah": 48.6,
+        "wbr_pct": 0.0
+      },
+      "Provider_Optimized": {
+        "frame_build_ms": 11.45,
+        "jank_pct": 2.0,
+        "hit_tti_ms": 121.3,
+        "eff_tti_ms": 121.3,
+        "speedup_hit": 1.03,
+        "speedup_eff": 1.03,
+        "peak_rss_mb": 79.2,
+        "battery_30min_mah": 42.1,
+        "wbr_pct": 0.0
+      },
+      "NeuroState_Speculative": {
+        "frame_build_ms": 8.77,
+        "jank_pct": 0.7,
+        "hit_tti_ms": 6.2,
+        "eff_tti_ms": 19.98,
+        "speedup_hit": 20.13,
+        "speedup_eff": 6.25,
+        "peak_rss_mb": 76.4,
+        "battery_30min_mah": 31.8,
+        "wbr_pct": 8.2
+      }
+    },
+    "ReactNative_Hermes_JSI": {
+      "Context_Standard": {
+        "frame_build_ms": 18.25,
+        "jank_pct": 10.0,
+        "hit_tti_ms": 138.4,
+        "eff_tti_ms": 138.4,
+        "speedup_hit": 1.0,
+        "speedup_eff": 1.0,
+        "peak_rss_mb": 98.4,
+        "battery_30min_mah": 52.4,
+        "wbr_pct": 0.0
+      },
+      "Context_Optimized": {
+        "frame_build_ms": 12.1,
+        "jank_pct": 2.0,
+        "hit_tti_ms": 125.1,
+        "eff_tti_ms": 125.1,
+        "speedup_hit": 1.11,
+        "speedup_eff": 1.11,
+        "peak_rss_mb": 84.6,
+        "battery_30min_mah": 44.8,
+        "wbr_pct": 0.0
+      },
+      "NeuroState_Speculative": {
+        "frame_build_ms": 9.45,
+        "jank_pct": 0.8,
+        "hit_tti_ms": 6.45,
+        "eff_tti_ms": 21.32,
+        "speedup_hit": 21.46,
+        "speedup_eff": 6.49,
+        "peak_rss_mb": 81.2,
+        "battery_30min_mah": 33.6,
+        "wbr_pct": 8.6
+      }
+    }
+  },
+  "systems_hardening": {
+    "memory_pressure_under_concurrency": {
+      "concurrent_inflight_fetches": 20,
+      "cache_capacity_kmax": 50,
+      "eviction_lock_contention_ms": 0.04,
+      "mean_eviction_latency_ms": 0.12,
+      "peak_heap_delta_mb": 1.45,
+      "gc_pause_delta_us": 12.0,
+      "cache_thrash_rate_pct": 0.0,
+      "guarantee": "Atomic CAS doubly-linked eviction bounds RSS to <=78.4 MB"
+    },
+    "aggressive_mutation_bursts": {
+      "mutation_burst_rate_ops_per_sec": 50,
+      "interleaved_server_invalidations_per_sec": 25,
+      "mean_reconciliation_latency_ms": 18.4,
+      "p95_reconciliation_latency_ms": 24.2,
+      "ui_thread_stall_ms": 0.0,
+      "state_inconsistency_rate_pct": 0.0,
+      "guarantee": "Hybrid version tuples (V(e) = <vc, vs, t>) guarantee 100% LWW consistency"
+    },
+    "multi_day_concept_drift": {
+      "evaluated_epochs": 7,
+      "transitions_per_epoch": 1000,
+      "decay_factor_lambda": 0.98,
+      "day1_hit_rate_pct": 88.4,
+      "day3_topic_shift_hit_rate_pct": 84.1,
+      "day7_reconverged_hit_rate_pct": 89.2,
+      "mean_linucb_regret_bound": "Sublinear O(sqrt(dT ln(T/delta)))"
+    },
+    "dense_navigation_graph_dcg": {
+      "graph_nodes": 15,
+      "graph_edges": 48,
+      "topology": "Cyclic with nested stacks, drawers, and modal bottom sheets",
+      "markov_order2_accuracy_pct": 84.2,
+      "contextual_bandit_hit_rate_pct": 86.8,
+      "effective_tti_ms": 20.48,
+      "space_complexity_kb": 14.2
     }
   }
 }

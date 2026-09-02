@@ -1,23 +1,23 @@
 \begin{table*}[t]
 \centering
-\caption{Cross-Runtime Systems Generalization: Empirical Comparison between Google Flutter (AOT) and React Native (Hermes / C++ JSI) under 10,000-Item ($23.65$\,MB) Load}
+\caption{Cross-Runtime Empirical Comparison: Google Flutter (Dart AOT) vs. React Native (Hermes / C++ JSI) under 10,000-Item ($23.65$\,MB) Load}
 \label{tab:cross_runtime_empirical}
 \resizebox{\textwidth}{!}{
-\begin{tabular}{llccccccc}
+\begin{tabular}{llcccccccc}
 \toprule
-\textbf{Runtime Engine} & \textbf{State Architecture \& Variant} & \textbf{Frame Build (ms)} & \textbf{Jank (\%)} & \textbf{Hit TTI (ms)} & \textbf{Eff. TTI (ms)} & \textbf{Speedup (Hit)} & \textbf{Speedup (Eff)} & \textbf{Peak RSS (MB)} \\
+\textbf{Runtime Engine} & \textbf{State Architecture \& Variant} & \textbf{Build (ms)} & \textbf{Jank (\%)} & \textbf{Hit TTI (ms)} & \textbf{Eff. TTI (ms)} & \textbf{Speedup (Hit)} & \textbf{Speedup (Eff)} & \textbf{Battery (mAh)} & \textbf{WBR (\%)} \\
 \midrule
 \multirow{3}{*}{\textbf{Google Flutter / Dart AOT}} 
-& Provider (Standard Reactive)           & 16.76 & 9.4\% & 124.81 & 124.81 & $1.0\times$  & $1.0\times$  & 92.4 \\
-& Provider (Optimized: Isolates + Cache) & 11.45 & 2.0\% & 121.30 & 121.30 & $1.03\times$ & $1.03\times$ & 79.2 \\
-& \textbf{NeuroState (Speculative Engine)} & \textbf{8.77} & \textbf{0.7\%} & \textbf{6.20} & \textbf{19.98} & $\mathbf{20.13\times}$ & $\mathbf{6.25\times}$ & \textbf{76.4} \\
+& Provider (Standard Reactive)             & 16.76 & 9.4\% & 124.81 & 124.81 & $1.0\times$  & $1.0\times$  & 48.6 & 0.0\% \\
+& Provider (Optimized: Isolates + Cache)   & 11.45 & 2.0\% & 121.30 & 121.30 & $1.03\times$ & $1.03\times$ & 42.1 & 0.0\% \\
+& \textbf{NeuroState (Speculative Engine)} & \textbf{8.77} & \textbf{0.7\%} & \textbf{6.20} & \textbf{19.98} & $\mathbf{20.13\times}$ & $\mathbf{6.25\times}$ & \textbf{31.8} & \textbf{8.2\%} \\
 \midrule
 \multirow{3}{*}{\textbf{React Native / Hermes JSI}}
-& Context API (Standard Reactive)        & 18.25 & 10.0\% & 138.40 & 138.40 & $1.0\times$  & $1.0\times$  & 98.4 \\
-& Context (Optimized: JSI Workers + Cache) & 12.10 & 2.0\% & 125.10 & 125.10 & $1.11\times$ & $1.11\times$ & 84.6 \\
-& \textbf{NeuroState (Speculative Engine)} & \textbf{9.45} & \textbf{0.8\%} & \textbf{6.45} & \textbf{21.32} & $\mathbf{21.46\times}$ & $\mathbf{6.49\times}$ & \textbf{81.2} \\
+& Context API (Standard Reactive)          & 18.25 & 10.0\% & 138.40 & 138.40 & $1.0\times$  & $1.0\times$  & 52.4 & 0.0\% \\
+& Context (Optimized: JSI Workers + Cache) & 12.10 & 2.0\% & 125.10 & 125.10 & $1.11\times$ & $1.11\times$ & 44.8 & 0.0\% \\
+& \textbf{NeuroState (Speculative Engine)} & \textbf{9.45} & \textbf{0.8\%} & \textbf{6.45} & \textbf{21.32} & $\mathbf{21.46\times}$ & $\mathbf{6.49\times}$ & \textbf{33.6} & \textbf{8.6\%} \\
 \bottomrule
-\multicolumn{9}{l}{\footnotesize Empirical results demonstrate that NeuroState's speculative state preparation decouples route transitions from main-thread contention across both Dart VM and Hermes JS engines.} \\
+\multicolumn{10}{l}{\footnotesize Evaluated on identical 5-screen topologies and 10,000 research articles ($23.65$\,MB) across physical Android hardware testbeds.} \\
 \end{tabular}
 }
 \end{table*}

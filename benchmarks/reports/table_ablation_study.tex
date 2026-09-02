@@ -1,19 +1,19 @@
 \begin{table*}[t]
 \centering
-\caption{5-Way Factorial Component Ablation: Dissecting Performance Gains Across Subsystems}
+\caption{5-Way Factorial Ablation: Isolating Contributions of Concurrency, Speculation, and Velocity Lookahead}
 \label{tab:ablation_study}
 \resizebox{\textwidth}{!}{
 \begin{tabular}{lcccccc}
 \toprule
-\textbf{Ablation Configuration} & \textbf{Frame Build (ms)} & \textbf{Jank (\%)} & \textbf{Eff. TTI (ms)} & \textbf{Hit TTI (ms)} & \textbf{Miss TTI (ms)} & \textbf{Isolate Offload (\%)} \\
+\textbf{Ablation Configuration} & \textbf{Mean Build (ms)} & \textbf{Jank (\%)} & \textbf{Hit TTI (ms)} & \textbf{Eff. TTI (ms)} & \textbf{UI Thread CPU (\%)} & \textbf{Worker Offload (\%)} \\
 \midrule
-Ablation 1: Reactive Baseline (UI Thread)     &        16.76 &    8.9\% &       128.40 &           -- &       128.40 &          0.0\% \\
-Ablation 2: Isolates-Only (No Prefetch)       &        11.85 &    2.4\% &       122.10 &           -- &       122.10 &         74.0\% \\
-Ablation 3: Markov Prefetch Only (UI Thread)  &        15.60 &    6.8\% &        35.80 &         7.80 &       128.50 &          0.0\% \\
-Ablation 4: Viewport Velocity Lookahead Only  &        11.40 &    2.2\% &        78.40 &         6.50 &       124.00 &         58.0\% \\
-\textbf{Ablation 5: Full NeuroState Engine           } & \textbf{        9.85} & \textbf{   1.1\%} & \textbf{        6.20} & \textbf{        6.20} & \textbf{      125.00} & \textbf{        74.0\%} \\
+Reactive Baseline (UI Thread)              &    16.76 &    8.9\% &      --- &   128.40 &   42.8\% &    0.0\% \\
+Isolates-Only (No Prefetch)                &    11.85 &    2.4\% &      --- &   122.10 &   26.2\% &   74.0\% \\
+Markov Prefetch Only (UI Thread)           &    15.60 &    6.8\% &     7.80 &    35.80 &   38.5\% &    0.0\% \\
+Viewport Velocity Lookahead Only           &    11.40 &    2.2\% &     6.50 &    78.40 &   25.1\% &   58.0\% \\
+\textbf{Full NeuroState Engine                    } & \textbf{    9.85} & \textbf{   1.1\%} & \textbf{    6.20} & \textbf{    6.20} & \textbf{  17.8\%} & \textbf{  74.0\%} \\
 \bottomrule
-\multicolumn{7}{l}{\footnotesize Key insight: Background isolates eliminate frame jank ($8.4\% \to 2.1\%$), while speculative intent prefetching drives TTI speedup ($124.81\text{ms} \to 2.02\text{ms}$).} \\
+\multicolumn{7}{l}{\footnotesize Isolates offload compute to prevent jank; Markov prefetching eliminates reactive network stalls upon route transitions.} \\
 \end{tabular}
 }
 \end{table*}
