@@ -1,0 +1,24 @@
+{
+  "name": "neurostate-react-native-benchmark",
+  "version": "1.0.0",
+  "description": "NeuroState Speculative State Preparation Runtime and Benchmarking Suite for React Native (Hermes / JSI)",
+  "main": "dist/runner/run_rn_suite.js",
+  "scripts": {
+    "build": "tsc",
+    "bench": "tsc && node dist/runner/run_rn_suite.js"
+  },
+  "keywords": [
+    "react-native",
+    "systems",
+    "speculative-execution",
+    "prefetching",
+    "zero-copy",
+    "benchmarks"
+  ],
+  "author": "Jeevan Kumar Kushwaha",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.5.0",
+    "typescript": "^5.5.4"
+  }
+}
