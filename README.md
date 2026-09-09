@@ -1,16 +1,27 @@
-# 🧠 NeuroState: Resource-Aware Predictive Prefetching & State Preparation for Flutter Applications
+# 🧠 NeuroState: Speculative State Warming for Declarative Mobile UIs under Resource Constraints
 
-[![Flutter Version](https://img.shields.io/badge/Flutter-3.24.3-02569B?logo=flutter)](https://flutter.dev)
-[![Dart SDK](https://img.shields.io/badge/Dart-3.5.3-0175C2?logo=dart)](https://dart.dev)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Artifact Evaluation](https://img.shields.io/badge/Artifact-Functional%20%26%20Reusable-green.svg)](file:///e:/flutter%20paper/REPRODUCE.md)
-[![Preprint](https://img.shields.io/badge/Preprint-Under%20Peer%20Review-orange.svg)](file:///e:/flutter%20paper/paper/main.pdf)
+<p align="center">
+  <a href="https://flutter.dev"><img src="https://img.shields.io/badge/Flutter-3.24.3-02569B?logo=flutter&logoColor=white" alt="Flutter Version"></a>
+  <a href="https://dart.dev"><img src="https://img.shields.io/badge/Dart-3.5.3-0175C2?logo=dart&logoColor=white" alt="Dart SDK"></a>
+  <a href="https://reactnative.dev"><img src="https://img.shields.io/badge/React%20Native-Hermes%20JSI-61DAFB?logo=react&logoColor=black" alt="React Native"></a>
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
+  <a href="./REPRODUCE.md"><img src="https://img.shields.io/badge/Artifact-Functional%20%26%20Reusable-green.svg" alt="Artifact Evaluation"></a>
+  <a href="./paper/main.pdf"><img src="https://img.shields.io/badge/Paper-IEEE%20Transactions%20Preprint-blue.svg" alt="Preprint"></a>
+</p>
 
-> **Official Research Artifact Repository** for the paper:  
-> *"NeuroState: Resource-Aware Predictive Prefetching and Background State Preparation for Flutter Applications"*  
-> **Author**: Jeevan Kumar Kushwaha  
-> **Affiliation**: Department of Electronics and Computer Engineering, Institute of Engineering (IOE), Tribhuvan University  
-> **Contact**: `er.jeevankushwaha@gmail.com`
+---
+
+### 👨‍💻 Author & Research Affiliation
+
+| Field | Details |
+| :--- | :--- |
+| **Author** | **Jeevan Kumar Kushwaha** |
+| **Department** | Department of Electronics and Computer Engineering |
+| **Institution** | Eastern Regional Campus (ERC), Institute of Engineering (IOE), Tribhuvan University |
+| **Location** | Dharan 56700, Nepal |
+| **Email** | [`er.jeevankushwaha@gmail.com`](mailto:er.jeevankushwaha@gmail.com) |
+| **Research Artifact** | [github.com/zione-kushwaha/Neurostate](https://github.com/zione-kushwaha/Neurostate) |
+| **Full Preprint** | [`paper/main.pdf`](./paper/main.pdf) |
 
 ---
 
