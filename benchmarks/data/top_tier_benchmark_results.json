@@ -1,6 +1,6 @@
 {
   "benchmark_suite": "NeuroState_Empirical_Rigor_Suite_v9_TopTier_PC_Ready",
-  "timestamp": "2026-09-02T09:26:34.777432",
+  "timestamp": "2026-09-02T10:28:53.070686",
   "iterations_per_condition": 50,
   "models_evaluation": {
     "RandomPredictor": {
