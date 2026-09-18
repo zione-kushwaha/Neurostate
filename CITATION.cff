@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use NeuroState in your research, please cite it as below."
+authors:
+  - family-names: "Kushwaha"
+    given-names: "Jeevan Kumar"
+    affiliation: "Department of Electronics and Computer Engineering, Eastern Regional Campus (ERC), Institute of Engineering (IOE), Tribhuvan University"
+title: "NeuroState: Speculative State Preparation for Declarative UI Engines"
+version: 1.0.0
+date-released: 2026-09-18
+url: "https://github.com/zione-kushwaha/Neurostate"
+keywords:
+  - declarative-ui
+  - speculative-execution
+  - multi-armed-bandits
+  - flutter
+  - react-native
+  - mobile-systems
