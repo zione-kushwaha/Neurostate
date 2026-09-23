@@ -34,3 +34,7 @@ paper/
 *~
 .DS_Store
 Thumbs.db
+
+add_rg.py
+*.token
+
