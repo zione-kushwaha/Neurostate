@@ -4,8 +4,9 @@
   <a href="https://flutter.dev"><img src="https://img.shields.io/badge/Flutter-3.24.3-02569B?logo=flutter&logoColor=white" alt="Flutter Version"></a>
   <a href="https://dart.dev"><img src="https://img.shields.io/badge/Dart-3.5.3-0175C2?logo=dart&logoColor=white" alt="Dart SDK"></a>
   <a href="https://reactnative.dev"><img src="https://img.shields.io/badge/React%20Native-Hermes%20JSI-61DAFB?logo=react&logoColor=black" alt="React Native"></a>
+  <a href="./ARTIFACT.md"><img src="https://img.shields.io/badge/AEC-Reproducibility%20Package-blueviolet.svg" alt="AEC Artifact"></a>
+  <a href="./CITATION.cff"><img src="https://img.shields.io/badge/Cite-CITATION.cff-informational.svg" alt="Citation"></a>
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
-  <a href="./REPRODUCE.md"><img src="https://img.shields.io/badge/Artifact-Functional%20%26%20Reusable-green.svg" alt="Artifact Evaluation"></a>
   <a href="./paper/main.pdf"><img src="https://img.shields.io/badge/Paper-IEEE%20Transactions%20Preprint-blue.svg" alt="Preprint"></a>
 </p>
 
