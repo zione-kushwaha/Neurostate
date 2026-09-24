@@ -38,3 +38,11 @@ Thumbs.db
 add_rg.py
 *.token
 
+# Markdown documentation files (only README.md files are tracked)
+ARTIFACT.md
+CONTRIBUTING.md
+EXPERIMENT_SETUP.md
+METRICS.md
+REPRODUCE.md
+TOP_TIER_RESEARCH_ROADMAP.md
+.github/ISSUE_TEMPLATE/*.md
